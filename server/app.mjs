@@ -113,9 +113,7 @@ app.put("/assignments/:assignmentId", async (req, res) => {
         message: "Server could not find a requested assignment to update",
       });
     }
-    return res
-      .status(200)
-      .json({ message: "Updated assignment sucessfully", result: result });
+    return res.status(200).json({ message: "Updated assignment sucessfully" });
   } catch (e) {
     return res.status(500).json({
       message: "Server could not update assignment because database connection",
